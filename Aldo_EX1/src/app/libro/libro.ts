@@ -70,6 +70,11 @@ export class LibroComponent {
     this.autor = this.libros[indice].autor;
   }
 
+  
+
+  guardarEnLocalStorage() {
+    localStorage.setItem('libros', JSON.stringify(this.libros));
+  }
   eliminar(indice: number) {
     if (confirm('¿Eliminar este libro?')) {
       this.libros.splice(indice, 1);
@@ -82,9 +87,5 @@ export class LibroComponent {
     this.titulo = '';
     this.autor = '';
     this.indiceEditar = -1;
-  }
-
-  guardarEnLocalStorage() {
-    localStorage.setItem('libros', JSON.stringify(this.libros));
   }
 }
