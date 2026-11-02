@@ -17,7 +17,7 @@ export class LoginComponent {
 
   iniciarSesion() {
     if (this.usuario === 'admin' && this.clave === '123') { 
-      localStorage.setItem('sesionBiblioteca', 'si');
+      localStorage.setItem('sesionExamen', 'si');
       this.router.navigate(['/libro']);
     } else {
       alert('Usuario o contraseña incorrectos');
